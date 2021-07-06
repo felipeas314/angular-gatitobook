@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MensagemComponent } from './mensagem/mensagem.component';
+import { MensagemComponent } from './mensagem.component';
 
 
 
@@ -8,6 +8,7 @@ import { MensagemComponent } from './mensagem/mensagem.component';
   declarations: [MensagemComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[MensagemComponent]
 })
-export class ComponentesModule { }
+export class MensagemModule { }
