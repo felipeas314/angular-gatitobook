@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { minusculoValidator } from './minusculo.validator';
 import { NovoUsuario } from './novo-usuario';
 import { NovoUsuarioService } from './novo-usuario.service';
 
@@ -20,18 +21,18 @@ export class NovoUsuarioComponent implements OnInit {
         Validators.required,
         Validators.email
       ]],
-      fullName: ['',[
+      fullName: ['', [
         Validators.required,
         Validators.minLength
       ]],
-      userName: [''],
+      userName: ['', [minusculoValidator]],
       password: ['']
     })
   }
 
-  cadastrar(){
+  cadastrar() {
     const novoUsuario = this.novoUsuarioForm.getRawValue() as NovoUsuario;
-    console.log('novoUsuario:',novoUsuario);
+    console.log('novoUsuario:', novoUsuario);
   }
 
 }
