@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule
-  ]
+  ],
+  exports: [RodapeComponent]
 })
 export class RodapeModule { }
